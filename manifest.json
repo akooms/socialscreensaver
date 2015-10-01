@@ -1,20 +1,26 @@
 {
   "manifest_version": 2,
 
-  "name": "Example Chrome Extension",
-  "description": "",
-  "version": "0.0.1",
+  "name": "Social Screensaver",
+  "description": "Turn your Chrome tab into a screensaver that displays dynamic social content!",
+  "icons": {
+     "128": "images/ss.png"
+  },
+  "version": "0.0.4",
+  "permissions" : ["management"],
+    "chrome_url_overrides" : {
+        "newtab": "/src/newtab.html"
+  },
   "background": {
     "scripts": ["/src/background.js"]
   },
   "content_scripts": [
     {
       "matches": ["*://google.com/*"],
-      "js": ["/lib/zepto.min.js", "/src/content.js"],
+      "js": ["/lib/zepto.min.js", "/src/content.js", "/lib/jquery.min.js"],
       "all_frames": true
     }
   ],
-  "browser_action": { "default_popup": "/src/popup.html" },
-  "permissions": ["*://google.com/*"],
-  "content_security_policy": "script-src 'self' https://cdn.mxpnl.com; object-src 'self'"
+  "permissions": ["*://api.instagram.com/*", "*//ajax.googleapis.com/*"]
+
 }

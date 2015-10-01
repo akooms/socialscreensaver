@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <!--Load scripts and CSS-->
+    <script type="text/javascript" src="/lib/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="newtab.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="base.js"></script>
+  </head>
+
+  <body>
+    <!--Create div element for the log in form and title-->
+    <div id="login">
+    	<h1>SOCIAL SCREENSAVER</h1>
+      <p>Enter an Instagram hashtag to get started!</p>
+        <!--Form to take in user input-->
+        <form id="hashtag-search">
+          <label># </label>
+        	<input type="search" id="tag" name="tag" placeholder="goldengatebridge" autocomplete="off" required pattern="[a-zA-Z0-9]+"/>
+          <button type="submit" class="btn btn-primary btn-block btn-large" value="Search">Submit</button>
+        </form>
+        <!--Fullscreen and cancel fullscreen buttons-->
+        <button class="btn btn-primary btn-block btn-large" id="button-fullscreen">Fullscreen</button>
+        <button class="btn btn-primary btn-block btn-large" id="button-cancel">Exit</button>
+    </div>
+    <!--Load script to run fullscreen mode-->
+    <script src="base.js"></script>
+    <!--Container where the images are loaded into-->
+    <div id="images-go-here"></div>
+  </body>
+  <!--Footer for name credit-->
+  <footer>
+    <a id="footer-name" href="http://twitter.com/akooms" target="_blank"> created by @akooms </a>
+  </footer>
+</html>
